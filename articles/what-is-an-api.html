@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What Is an API? Explained Like You're 12 — Aarav Sharma</title>
+    <meta name="description" content="APIs run the modern internet, but most explanations are written for people who already get it. Here's the version that actually makes sense." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+    <nav>
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">aarav<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#writing">Writing</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="article-hero">
+        <div class="container">
+            <a href="../index.html#writing" class="article-back">Back to writing</a>
+            <span class="section-label">/ explainer</span>
+            <h1>What Is an API? Explained Like You're 12</h1>
+            <div class="article-meta">
+                <span>By Aarav Sharma</span>
+                <span class="dot"></span>
+                <span>~ 950 words</span>
+                <span class="dot"></span>
+                <span>6 min read</span>
+            </div>
+        </div>
+    </header>
+
+    <article class="article-body">
+        <div class="container">
+
+            <p>
+                You've probably seen the word <strong>API</strong> floating around — in
+                YouTube tutorials, in tech news, in that one job ad your cousin keeps
+                forwarding you. The official definition is "Application Programming
+                Interface," which tells you absolutely nothing useful.
+            </p>
+
+            <p>
+                So let's skip the textbook version and explain it the way someone
+                actually should: with a restaurant.
+            </p>
+
+            <h2>The restaurant analogy (but actually good)</h2>
+
+            <p>
+                Picture yourself at a restaurant. You sit down, look at the menu, and
+                decide you want a cheese pizza. You don't walk into the kitchen, grab
+                some dough, and start spinning it yourself. You also don't shout your
+                order at the chef from across the room. You tell the <strong>waiter</strong>.
+            </p>
+
+            <p>
+                The waiter takes your order, walks it to the kitchen, waits for the
+                pizza to be made, and brings it back to your table. You never had to
+                know how the oven works, where the cheese comes from, or how the chef
+                is feeling that day. You just made a request and got a result.
+            </p>
+
+            <p>
+                <strong>That waiter is an API.</strong>
+            </p>
+
+            <p>
+                In tech terms: an API is the messenger that lets one piece of software
+                ask another piece of software for something — without needing to know
+                how that other software actually works under the hood.
+            </p>
+
+            <h2>Where you've already used APIs (without realizing it)</h2>
+
+            <p>
+                Here's the thing: you use APIs all day, every day. You just don't see
+                them. A few examples:
+            </p>
+
+            <ul>
+                <li>
+                    <strong>Logging into an app with Google.</strong> When a website
+                    says "Sign in with Google," it doesn't store your Google password.
+                    It politely asks Google's API, "Hey, is this person who they say they
+                    are?" Google checks and replies yes or no.
+                </li>
+                <li>
+                    <strong>Checking the weather.</strong> Your weather app doesn't have
+                    its own satellites. It calls a weather API, asks for the forecast in
+                    your city, and shows you what comes back.
+                </li>
+                <li>
+                    <strong>Paying with a card on Amazon.</strong> Amazon doesn't process
+                    your card themselves. They send the payment details to a payment
+                    API (like Stripe or Razorpay), and that API handles the bank
+                    conversation behind the scenes.
+                </li>
+                <li>
+                    <strong>Booking an Uber.</strong> The map you see is Google Maps
+                    talking to Uber through an API. Two completely different companies,
+                    one smooth experience.
+                </li>
+            </ul>
+
+            <p>
+                Every one of those interactions is a "waiter" running back and forth
+                between the kitchen and your table.
+            </p>
+
+            <h2>What an API actually does (in three steps)</h2>
+
+            <p>
+                Strip away the buzzwords and an API is really just three things:
+            </p>
+
+            <h3>1. A request</h3>
+            <p>
+                Your app asks for something specific. "Give me the weather for Mumbai."
+                "Charge this card 500 rupees." "Show me the latest tweets from this
+                user." These requests are usually sent over the internet to a special
+                URL called an <strong>endpoint</strong>.
+            </p>
+
+            <h3>2. Some work happening somewhere else</h3>
+            <p>
+                The other side does its thing. It checks the weather, talks to the
+                bank, looks up the tweets — whatever you asked for. You don't see this
+                part. It's the kitchen.
+            </p>
+
+            <h3>3. A response</h3>
+            <p>
+                The API sends data back, usually in a format called <strong>JSON</strong>
+                (which looks like a tidy bullet list of facts: <code>city: "Mumbai",
+                temperature: 32, humidity: 78</code>). Your app reads it and shows you
+                a screen — a weather widget, a "payment successful" message, a tweet
+                feed.
+            </p>
+
+            <p>
+                Three steps. Request, work, response. That's the whole game.
+            </p>
+
+            <h2>Why APIs are kind of a big deal</h2>
+
+            <p>
+                Before APIs were everywhere, every company had to build everything from
+                scratch. If you wanted maps in your app, you had to make maps. If you
+                wanted to send an email, you had to run your own email server. It was
+                slow, expensive, and a complete nightmare.
+            </p>
+
+            <p>
+                APIs changed that. Now anyone can plug into Google Maps, Stripe,
+                OpenAI, WhatsApp, or thousands of others — and instantly have features
+                that would have taken years to build. That's why a two-person startup
+                today can ship something a giant company couldn't have built a decade
+                ago. They're standing on a stack of APIs.
+            </p>
+
+            <blockquote>
+                A modern app is rarely "an app." It's a thin layer of design and logic
+                stitched on top of a dozen APIs doing the heavy lifting.
+            </blockquote>
+
+            <h2>So why should you care?</h2>
+
+            <p>
+                Even if you're not a developer, understanding APIs gives you a much
+                clearer picture of how the internet actually works — and why it
+                sometimes breaks.
+            </p>
+
+            <p>
+                Ever seen Instagram refuse to load when Facebook is down? That's
+                because Instagram talks to Facebook's APIs. Ever had a payment fail
+                because the bank's "system was down"? That's an API timing out. Ever
+                wondered how ChatGPT shows up inside other apps? Yeah — that's an API
+                too.
+            </p>
+
+            <p>
+                Once you start noticing them, APIs are everywhere. They're the
+                invisible plumbing that makes the modern internet feel seamless. And
+                the next time someone throws "API" into a conversation, you'll know
+                exactly what they mean.
+            </p>
+
+            <p>
+                It's just a waiter. A very fast, very polite waiter — running between
+                the apps you use and the kitchens you'll never see.
+            </p>
+
+            <div class="article-footer">
+                <a href="../index.html#writing" class="article-back">More articles</a>
+                <a href="mailto:sharmaaarav662003@gmail.com" class="btn btn-primary">Hire me to write for you</a>
+            </div>
+
+        </div>
+    </article>
+
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <p>&copy; 2026 Aarav Sharma.</p>
+                <ul class="social">
+                    <li><a href="https://github.com/Sharma-Aarav" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.69 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.93 10.93 0 0 1 5.74 0c2.18-1.49 3.14-1.18 3.14-1.18.62 1.58.23 2.75.12 3.04.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.41-5.27 5.69.41.36.78 1.07.78 2.15v3.18c0 .31.21.68.8.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg></a></li>
+                    <li><a href="https://www.linkedin.com/in/aaravsharma66/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.95v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a></li>
+                    <li><a href="mailto:sharmaaarav662003@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
